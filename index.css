@@ -1,0 +1,1217 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.website-container{
+    background-color: rgb(235, 211, 179);
+}
+::-webkit-scrollbar{
+    width:5px;
+}
+::-webkit-scrollbar-track{
+    background-color: white;
+}
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(to bottom, purple 3%, red 97%);
+}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+.navbar img{
+    width:150px;
+    height:70px;
+    object-fit: cover;
+    animation: logo;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes logo {
+    from{
+        transform: scale(0,0);
+        /* transform: rotate(0deg); */
+    }
+    to{
+        transform: scale(1,1);
+        /* transform: rotate(360deg); */
+    }
+    
+}
+.navbar{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding:10px;
+    background-image:linear-gradient(to right,rgb(24, 136, 136) 3%, purple 97%);
+    position:fixed;
+    z-index:999;
+    top:0;
+    width:100%;
+}
+input:checked~.menu-nav{
+    right:0;
+    transition: 0.8s;
+}
+.navbar i{
+    font-size:40px;
+    color:white;
+    position: absolute;
+    right:20px;
+    top:25px;
+    display: none;
+}
+
+.navbar input{
+    position: absolute;
+    right:0;
+    top:0;
+    display: none;
+}
+.menu-nav a{
+color:white;
+text-decoration: none;
+text-align: center;
+width:120px;
+height:40px;
+}
+.menu-nav{
+    display: flex;
+    gap:20px;
+    /* padding-right:20px; */
+    font-size:25px;
+    font-family: 'Dancing Script', cursive;
+    cursor: pointer;
+    animation-name: menu-nav;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes menu-nav{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+.menu-nav a:hover{
+    border-top:2px solid white;
+    border-bottom:2px solid white;
+}
+.match-info{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:80px;
+    flex-wrap: wrap;
+    padding:70px 20px;
+    gap:60px;
+    background: url("https://www.poornima.edu.in/wp-content/uploads/2023/10/which-cricket-ground-is-biggest-in-the-world_9a68a68e1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.match-hls{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* justify-content: center; */
+    align-items: center;
+}
+.match-hls img{
+width:230px;
+border-radius:15px;
+height:250px;
+position: relative;
+object-fit: cover;
+box-shadow: 1px 1px 7px 4px rgb(168, 166, 166);
+}
+.match-hls img:hover{
+    box-shadow: 1px 1px 7px 4px rgb(206, 69, 69);
+    transform: scale(1.1,1.1);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.match-hls button{
+    width:70px;
+    height:27px;
+    border:none;
+    background:linear-gradient(to right, red 3%, purple 90%);
+    color:white;
+    font-family: 'Dancing Script', cursive;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 70px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    right:10px;
+    top:10px;
+    z-index:2;
+}
+.match-hls p{
+    font-size:18px;
+    width:170px;
+    text-align: center;
+    color:white;
+    text-shadow: 0px 1px 1px rgb(73, 64, 64),0px -1px 1px rgb(56, 52, 52),1px 0px 1px rgb(61, 42, 42),-1px 0px 1px rgb(65, 34, 34);
+    position: absolute;
+    bottom:5px;
+    font-family: 'Lilita One', sans-serif;
+    font-weight: bold;
+}
+.day-date{
+    display: flex;
+    max-height: 380px;
+    overflow: scroll;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+    padding:10px;
+}
+.matches-event{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    padding:30px;
+    gap:30px;
+}
+.matches-event h1{
+    width:450px;
+font-size:50px;
+color:rgb(185, 9, 91);
+font-family: 'Dancing Script', cursive;
+}
+.matches-event span{
+    color:rgb(115, 9, 136);
+    }
+.count-logo img{
+width:60px;
+height:60px;
+margin-top:10px;
+object-fit: cover;
+}
+.match-day-date{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap:40px;
+    width:500px;
+}
+.time{
+    font-size:25px;
+    color:rgb(45, 0, 128);
+    font-family: 'Noto Serif Balinese', serif;
+    border-bottom: 2px solid gray;
+    padding-bottom:10px;
+}
+.count-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.img-content{
+    display: flex;
+    gap:30px;
+}
+.location{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.location p{
+    padding:10px;
+}
+.location div:nth-child(1),.location div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+}
+.location div:nth-child(1) h3{
+    font-size:18px;
+    font-family: 'Dancing Script', cursive;
+    color:rgb(190, 16, 132);
+}
+.location div:nth-child(2) h3{
+    font-size:18px;
+    font-family: 'Dancing Script', cursive;
+    color:rgb(99, 90, 107);
+}
+.location div:nth-child(2) bold{
+    font-size:15px;
+    color:rgb(100, 87, 97);
+}
+.location div:nth-child(3) p,h4{
+    font-family: 'Dancing Script', cursive;
+}
+.videos-hlts{
+    margin-top:20px;
+}
+.videos-hlts h1{
+    padding-top:50px;
+    padding-bottom:10px;
+    text-align: center;
+    color:rgb(226, 43, 150);
+    text-shadow: 0px 1px 1px rgb(14, 12, 12),0px -1px 1px rgb(12, 11, 11),1px 0px 1px rgb(10, 9, 9),-1px 0px 1px rgb(8, 7, 7);
+    font-family: 'Dancing Script', cursive;
+}
+.virat-bat-video{
+width:55%;
+
+
+height:550px;
+}
+.highlight-videos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    background:linear-gradient(to right, red 3%, purple 90%);
+}
+.side-video{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap:8px;
+    width:40%;
+    margin-top:85px;
+    color:white;
+    font-family: 'Dancing Script', cursive;
+    font-size:17px;
+}
+.video-1{
+    display: flex;
+    background:linear-gradient(to right, red 3%, purple 90%);
+    gap:10px;
+}
+.video-1 video{
+    width:200px;
+    height:110px;
+}
+.icc-rank{
+    margin-top:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    font-size:30px;
+    color:rgb(209, 26, 26);
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+}
+.rank{
+    font-size:15px;
+    display: flex;
+    gap:40px;
+}
+.rank h1{
+    color: rgb(54, 51, 51);
+    font-family: 'Dancing Script', cursive;
+    padding:20px;
+}
+.team-ranking img{
+    width:170px;
+    height:100px;
+    object-fit: cover;
+}
+.overall-rank-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    padding:10px;
+}
+.rank-card{
+    display: flex;
+    flex-direction: column;
+    width:30%;
+    background:linear-gradient(to bottom, rgb(161, 18, 142) 3%, white 90%);
+    border-radius:10px;
+    box-shadow: 1px 1px 7px 4px rgb(117, 108, 117);
+}
+.rank-card>button{
+    width:70px;
+    height:25px;
+    background-color: rgb(15, 128, 0);
+    color: aliceblue;
+    border: none;
+    font-size:18px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 20px;
+}
+.country-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    padding:20px;
+}
+.possition button{
+width:25px;
+height:20px;
+}
+.possition h1{
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: 'Dancing Script', cursive;
+}
+.bttn1{
+    background-color: unset;
+    border: none;
+    font-size:18px;
+}
+.bttn2{
+    background-color: green;
+    border: none;
+    font-size:18px;
+    border-top-left-radius:10px;
+    border-bottom-right-radius: 10px;
+}
+.possition{
+    width:33%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.po-1{
+    background: linear-gradient(to bottom, rgb(15, 128, 0) 10%, white 90%);
+}
+.po-2{
+    background: linear-gradient(to bottom, rgb(128, 0, 21) 10%, white 90%);
+}
+.possition img{
+    width:70px;
+    height:70px;
+    margin: auto;
+   
+}
+.rank-table img{
+width:40px;
+height:40px;
+object-fit: cover;
+}
+.rank-table,td{
+    background-color: aliceblue;
+    border-bottom: 2px solid gray;
+    border-collapse: collapse;
+    font-size:15px;
+    font-weight: bolder;
+    font-family: 'Dancing Script', cursive;
+    padding-left:5px;
+}
+.cwc23{
+    display: flex;
+    padding-top:20px;
+    flex-direction: column;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+}
+.cwc23 img{
+    width:300px;
+    height:100px;
+    object-fit: cover;
+    border-radius: 50px;
+    animation-name:image;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes image {
+    from{
+        box-shadow: 0px 0x 0px 0px rgb(119, 10, 119);
+    }
+    to{
+        box-shadow: 1px 1px 7px 4px rgb(238, 241, 13);
+    }
+    
+}
+.icc-vwc23{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    padding:20px;
+}
+.icc-vwc23 div{
+    width:250px;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-size:500%;
+    transition:all 1s ease-in-out;
+    background-image: linear-gradient(to right,rgb(11, 9, 104), rgb(128, 26, 0),blue);
+}
+.icc-vwc23 div:hover{
+    background-position: 100% 0;
+    transition: all 1s ease-in-out;
+}
+.icc-vwc23 p{
+    font-size:20px;
+    color:rgb(230, 16, 98);
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+}
+.icc-vwc23 a{
+    font-size:23px;
+    color:rgb(248, 245, 247);
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+}
+.icc-vwc23 img{
+    width:70px;
+    height:70px;
+    object-fit: cover;
+}
+.partners{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+    padding-top:30px;
+}
+.partners p{
+    font-weight: bold;
+    font-size:30px;
+    font-family: 'Dancing Script', cursive;
+    color:rgb(104, 100, 100);
+}
+.partner-1,.partner-2,.partner-3{
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    padding:20px;
+    justify-content: center;
+    align-items: center;
+}
+.partner-1 img{
+    width:160px;
+    height:70px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.partner-2 img{
+    width:130px;
+    height:50px;
+    object-fit: cover;
+    border-radius: 10px;
+    }
+.partner-3 img{
+     width:120px;
+    height:40px;
+    object-fit: cover;
+    border-radius: 10px;
+    }
+    .ending-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:30px;
+        background-image: linear-gradient(to right,rgb(11, 9, 104), rgb(128, 94, 0),blue);
+        padding:20px;
+    }
+    .social-follow{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:10px;
+        padding:10px;
+    }
+    .social-follow h1{
+        font-size:20px;
+        color:white;
+        font-family: 'Dancing Script', cursive;
+        font-weight:bold;
+    }
+    .icon-div{
+        display: flex;
+        gap:10px;
+        font-size:25px;
+        cursor: pointer;
+    }
+    .fa-x-twitter{
+        color:black;
+    }
+    .fa-facebook-f{
+        color:blue;
+    }
+    .fa-instagram{
+        color:rgb(192, 10, 131);
+    }
+    .fa-youtube{
+        color:red;
+    }
+    .footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap:30px;
+    }
+    .intro{
+        display: flex;
+        flex-direction: column;
+        gap:5px;
+    }
+    .intro h1{
+        font-size:22px;
+        color:white;
+    }
+    .intro p{
+        font-size:13px;
+        color:rgb(168, 159, 159);
+    }
+    .contect-us p{
+        width:300px;
+    }
+
+                  /* awards page style start */
+
+    .background-image-container{
+        margin-top:90px;
+        background-image: url("https://i.dawn.com/primary/2016/03/56fa7d91851f9.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width:100%;
+        height:550px;
+    }
+    .background-image-container div{
+        display: flex;
+        width:30%;
+        color:white;
+        flex-direction: column;
+        padding-left:30px;
+        justify-content: center;
+        /* align-items: center; */
+        height:100%;
+        gap:20px;
+        font-family: 'Dancing Script', cursive;
+    }
+    .icc-logo{
+        width:120px;
+        height:120px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    .india{
+        width:60px;
+        height:40px;
+        object-fit: cover;
+    }
+    .background-image-container p{
+        font-size:30px;
+        text-shadow: 0px 1px 2px rgb(243, 237, 237),0px -1px 2px rgb(212, 191, 191),1px 0px 2px rgb(207, 202, 202),-1px 0px 2px rgb(223, 215, 215);
+    }
+    .background-image-container h3{
+        opacity:0.8;
+        font-size:30px;
+    }
+    .over-view-awards{
+        display: flex;
+        flex-wrap: wrap;
+        gap:5px;
+        justify-content: center;
+        align-items: center;
+        min-height:500px;
+        background-color: antiquewhite;
+    }
+    .over-view-awards img{
+        width:250px;
+        height:300px;
+        object-fit: cover;
+    }
+    .over-view-awards div{
+        width:50%;
+        display: flex;
+        flex-direction: column;
+        gap:40px;
+        min-height: 300px;
+        align-items: start;
+    }
+    .over-view-awards h1{
+        font-size:30px;
+        font-family: 'Dancing Script', cursive;
+    }
+    .over-view-awards p{
+    font-size:22px;
+    color:rgb(58, 54, 54);
+    }
+       .over-view-awards span{
+       color:blue;
+       cursor: pointer;
+       text-decoration-line:underline;
+       font-weight: bolder;
+       }
+       .more-awards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding:20px;
+        gap:70px;
+        font-family: 'Dancing Script', cursive;
+       }
+       .more-awards div:hover img{
+         transform: scale(1.05,1.05);
+         transition: all 1s;
+       }
+       .more-awards div{
+        width:250px;
+        line-height:25px;
+        cursor: pointer;
+       }
+       .more-awards h5{
+        font-size:20px;
+        color:blue;
+       }
+       .more-awards p{
+        color:rgb(112, 107, 107);
+       }
+       .more-awards img{
+        width:100%;
+        height:120px;
+        object-fit: cover;
+       }
+
+           /* news page style start*/
+
+       .news-image{
+        padding:10px;
+        width:100%;
+        border:2px solid purple;
+        margin-top:100px;
+       }
+       .news-image img{
+         width:100%;
+         height:500px;
+         object-fit: cover;
+       }
+       .history{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:20px;
+       }
+       .history h1{
+        font-size:40px;
+       }
+       .history h2{
+        color:purple;
+        font-weight: bold;
+       }
+       .history span{
+        color:rgb(226, 43, 144)
+       }
+       .history i{
+        font-size: 40px;
+        padding:10px;
+       }
+       .icon-1{
+        color:blue;
+       }
+       .icon-2{
+        color:rgb(68, 182, 228);
+       }
+       .icon-3{
+        color:red;
+       }
+       .h-font{
+        display: flex;
+        width:100%;
+       justify-content: center;
+       align-items: center;
+       }
+       .h-font h1{
+        display: inline-block;
+         font-size:150px;
+         color:blue;
+       }
+       .h-font h2{
+        display: inline-block;
+         font-size:30px;
+         width:70%;
+         font-weight: bolder;
+         font-family: 'Dancing Script', cursive;
+       }
+       .news-head p{
+        font-size:30px;
+        padding:20px;
+       }
+       .aus-final{
+        text-align: center;
+       }
+       .aus-final h1{
+        font-size:40px;
+        font-weight: bold;
+       }
+       .aus-final p{
+          font-size:25px;
+          color:rgb(31, 29, 29);
+          padding:20px;
+       }
+       .aus-final video{
+         width:100%;
+         height:400px;
+       }
+       .vdo-2{
+        width:100%;
+        height:300px;
+       }
+       .vdo-2~h1{
+        font-size:28px;
+        text-align: center;
+        color:purple;
+        font-family: 'Dancing Script', cursive;
+       }
+
+                    /* Teams page style div start */
+        .match-team{
+            display: flex;
+            justify-content: space-between;
+            font-size:50px;
+            padding:20px;
+            background-image:linear-gradient(to right,rgb(24, 136, 136) 3%, purple 97%);
+            color:white;
+            margin-top:80px;
+        }
+        .match-team i{
+            font-size:80px;
+            padding-top:23px;
+        }
+        .team-ranking-finish{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap:20px;
+            padding:20px;
+            background-color: white;
+        }
+        .icc-finish{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            width:99%;
+            box-shadow: 1px 1px 7px 2px rgb(168, 166, 166);
+            padding:20px;
+            border-right:10px solid red;
+            border-left:10px solid red;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .icc-finish img{
+            width:100px;
+            height:60px;
+            object-fit: cover;
+        }
+        .icc-finish h1,.icc-finish h2{
+            color:rgb(20, 9, 173);
+            font-weight: bolder;
+            font-size:28px;
+            font-family: 'Dancing Script', cursive;
+        }
+        .icc-finish h3{
+            color:rgb(148, 7, 31);
+            font-size:16px;
+            font-family: 'Dancing Script', cursive;
+        }
+        .icc-finish i{
+            font-size:30px;
+            color:blue;
+        }
+        .icc-finish:hover>i{
+            font-size: 35px;
+            transition: all 0.5s;
+        }
+        .icc-finish:hover{
+            box-shadow: 1px 1px 7px 8px rgb(206, 198, 198);
+        }
+
+        /* Standing page style start */
+        .table-div{
+            padding:20px;
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .table-div h1{
+            font-size:30px;
+            color:purple;
+            font-family: 'Dancing Script', cursive;
+        }
+        .table-div span{
+            color:rgb(201, 8, 82);
+        }
+        .table-div table{
+            width:95%;
+            text-align: center;
+        }
+        .table-div table,.table-div tr,.table-div td{
+            border-collapse: collapse;
+            padding:20px;
+        }
+        .table-div th{
+            font-size: 14px;
+            color:white;
+            background-color: blue;
+            font-family: 'Dancing Script', cursive;
+            font-weight: bolder;
+            padding:20px;
+        }
+        .safe-zoon{
+            border-bottom: 5px solid green;
+        }
+        .table-div img{
+            width:50px;
+            height:30px;
+            object-fit: cover;
+        }
+        .table-div td{
+            font-weight: bolder;
+            color:rgb(36, 35, 35);
+            background-color:rgb(209, 197, 182);
+        }
+
+@media screen and (max-width:600px) {
+    .navbar img{
+        position:relative;
+    }
+    .navbar{
+        padding:0;
+        padding-top:10px;
+    }
+    .menu-nav{
+        flex-direction: column;
+        position:absolute;
+        z-index: 999;
+        right:-100%;
+        top:80px;
+        justify-content:center;
+        align-items: center;
+        background-image:linear-gradient(to right,rgb(24, 136, 136) 3%, purple 97%);
+        width:100%;
+        height:90vh;
+        gap:30px;
+    }
+    .navbar i{
+        display: inline-block;
+    }
+    .match-info{
+    width:100%;
+    }
+    .matches-event{
+      width:100%;
+      padding:0px;
+    }
+    .img-content{
+        flex-direction: column;
+        gap:20px;
+    }
+    .count-logo{
+        display: flex;
+        flex-direction: row;
+        gap:20px;
+    }
+    .match-hls img{
+        width:90%;
+    }
+    .match-hls button{
+     right:30px;
+    }
+    .match-hls{
+        width:100%;
+    }
+    .match-day-date{
+        gap:40px;
+        width:90%;
+        padding:10px;
+    }
+    .highlight-videos{
+        display: flex;
+        flex-direction: column;
+    }
+    .virat-bat-video{
+        width:90%;
+        height:400px;
+        }
+        .side-video{
+            width:90%;
+        }
+        .overall-rank-card{
+            display: flex;
+            flex-direction: column;
+            width:100%;
+        }
+        .possition{
+            width:100%;
+        }
+        .rank-card{
+            width:100%;
+        }
+        .icc-rank{
+            display: flex;
+            width:100%;
+            flex-direction: column;
+            font-size:20px;
+        }
+        .team-ranking{
+            width:100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .matches-event h1{
+            width:100%;
+        font-size:25px;
+        }
+        .day-date{
+            width:100%;
+        }
+        .video-1{
+            flex-direction: column;
+            gap:20px;
+        }
+        .video-1 video{
+            width:100%;
+        }
+        .icc-vwc23 div{
+            width:90%;
+        }
+             /* awards media queryy*/
+        .background-image-container{
+            margin-top:50px;
+         }
+         .background-image-container div{
+            width:90%;
+        }
+        .over-view-awards div{
+            width:100%;
+            padding:10px;
+        }
+        .more-awards div{
+            width:80%;
+        }
+        .more-awards img{
+            height:300px;
+        }
+
+        /* new media query */
+        .h-font h2{
+             font-size:15px;
+            }
+
+            /* teams media query*/
+            .match-team{
+                font-size:20px;
+            }
+            .icc-finish{
+            flex-direction: column;
+            }
+            .match-team i{
+                font-size:40px;
+                padding-top:5px;
+            }
+            .icc-finish h1,.icc-finish h2{
+                font-size:18px;
+            }
+            .icc-finish h3{
+                font-size:15px;
+            }
+            .icc-finish i{
+                font-size:20px;
+            }
+            .icc-finish:hover>i{
+                font-size: 25px;
+            }
+
+            /* standings page media query*/
+    .hidden,.hidden-2{
+        display:none;
+    }
+    .table-div th{
+        font-size: 10px;
+        padding:10px;
+    }
+    .table-div table,.table-div tr,.table-div td{
+        padding:10px;
+    }
+    }
+
+@media screen and (min-width:600px) and (max-width:800px) {
+    .navbar img{
+        position:relative;
+    }
+    .navbar{
+        padding:0;
+        padding-top:10px;
+    }
+    .menu-nav{
+        flex-direction: column;
+        position:absolute;
+        z-index: 999;
+        right:-100%;
+        top:80px;
+        justify-content:center;
+        align-items: center;
+        background-image:linear-gradient(to right,rgb(24, 136, 136) 3%, purple 97%);
+        width:100%;
+        height:90vh;
+        gap:30px;
+    }
+    .navbar i{
+        display: inline-block;
+    }
+.highlight-videos{
+    display: flex;
+    flex-direction: column;
+}
+.virat-bat-video{
+    width:90%;
+}
+.side-video{
+    width:90%;
+}
+.rank-card{
+    width:500px;
+}
+.overall-rank-card{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+  /* awards media queryy*/
+  .background-image-container{
+    margin-top:50px;
+ }
+ .background-image-container div{
+    width:90%;
+}
+.over-view-awards div{
+    width:100%;
+    padding:10px;
+}
+.more-awards div{
+    width:80%;
+}
+.more-awards img{
+    height:400px;
+}
+
+ /* new media query */
+ .h-font h2{
+    font-size:25px;
+   }
+
+    /* teams media query*/
+    .match-team{
+        font-size:40px;
+    }
+    .match-team i{
+        font-size:50px;
+        padding-top:20px;
+    }
+     .match-team{
+        font-size:40px;
+    }
+    .match-team i{
+        font-size:50px;
+        padding-top:20px;
+    }
+    .icc-finish h1,.icc-finish h2{
+        font-size:20px;
+    }
+    .icc-finish h3{
+        font-size:18px;
+    }
+    .icc-finish i{
+        font-size:25px;
+    }
+    .icc-finish:hover>i{
+        font-size: 30px;
+    }
+
+    /* standings page media query*/
+    .hidden{
+        display:none;
+    }
+}
+
+
+@media screen and (min-width:800px) and (max-width:1020px) {
+    .menu-nav{
+        font-size:20px;
+        gap:30px;
+    }
+    .menu-nav a{
+        width:90px;
+        height:40px;
+        }
+    .match-hls{
+        width:45%;
+    }
+    .match-hls img{
+        width:100%;
+    }
+    .highlight-videos{
+        display: flex;
+        flex-direction: column;
+    }
+    .virat-bat-video{
+        width:90%;
+    }
+    .side-video{
+        width:70%;
+        display: flex;
+    }
+    .rank-card{
+        width:500px;
+    }
+    .overall-rank-card{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .day-date{
+        width:100%;
+    }
+    .match-day-date{
+        width:80%;
+    }
+    .location{
+        width:100%;
+    }
+
+      /* awards media queryy*/
+      .background-image-container{
+        margin-top:50px;
+     }
+     .background-image-container div{
+        width:90%;
+    }
+    .over-view-awards div{
+        width:100%;
+        padding:10px;
+    }
+    .more-awards div{
+        width:80%;
+    }
+    .more-awards img{
+        height:400px;
+    }
+
+     /* new media query */
+     .h-font h2{
+        font-size:28px;
+       }
+
+}
