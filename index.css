@@ -39,11 +39,13 @@
     display: flex;
     justify-content:space-between;
     align-items: center;
-    padding:10px;
-    background-image:linear-gradient(to right,rgb(24, 136, 136) 3%, purple 97%);
+    padding:5px 20px;
+    background-color:rgba(102, 7, 102,0.5);
     position:fixed;
     z-index:999;
-    top:0;
+    top:0px;
+    border-radius:50px;
+    border:2px solid red;
     width:100%;
 }
 input:checked~.menu-nav{
@@ -66,7 +68,7 @@ input:checked~.menu-nav{
     display: none;
 }
 .menu-nav a{
-color:white;
+color:black;
 text-decoration: none;
 text-align: center;
 width:120px;
@@ -99,9 +101,9 @@ height:40px;
     display:flex;
     justify-content: center;
     align-items: center;
-    margin-top:80px;
+    /* margin-top:80px; */
     flex-wrap: wrap;
-    padding:70px 20px;
+    padding:140px 20px;
     gap:60px;
     background: url("https://www.poornima.edu.in/wp-content/uploads/2023/10/which-cricket-ground-is-biggest-in-the-world_9a68a68e1.jpg");
     background-repeat: no-repeat;
@@ -688,6 +690,7 @@ object-fit: cover;
         width:100%;
         border:2px solid purple;
         margin-top:100px;
+        object-fit:cover;
        }
        .news-image img{
          width:100%;
